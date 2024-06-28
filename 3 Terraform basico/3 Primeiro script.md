@@ -76,19 +76,19 @@ O Terraform solicitará uma confirmação para destruir os recursos. Digite **ye
 
 Aqui está o arquivo completo **main.tf** com os passos mencionados:
 
-hcl
-provider "aws" {
-  region = "us-west-2"
-}
-
-resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "ExampleInstance"
-  }
-}
+        hcl
+        provider "aws" {
+          region = "us-west-2"
+        }
+        
+        resource "aws_instance" "example" {
+          ami           = "ami-0c55b159cbfafe1f0"
+          instance_type = "t2.micro"
+        
+          tags = {
+            Name = "ExampleInstance"
+          }
+        }
 
 Este é um exemplo básico que pode ser expandido para incluir outros recursos e configurações conforme necessário. Para ambientes mais complexos, você pode dividir suas configurações em vários arquivos e usar módulos do Terraform para organizar sua infraestrutura.
 
