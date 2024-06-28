@@ -8,11 +8,11 @@ Primeiro, você precisa configurar o provider da AWS. O provider é a forma como
 
 Crie um arquivo chamado **main.tf** e adicione o seguinte código:
 
-  hcl
-  
-  provider "aws" {
-    region = "us-west-2"
-  }
+    hcl
+    
+    provider "aws" {
+      region = "us-west-2"
+    }
 
 # Passo 2: Criar um Resource
 
