@@ -8,11 +8,11 @@ Primeiro, você precisa configurar o provider da AWS. O provider é a forma como
 
 Crie um arquivo chamado **main.tf** e adicione o seguinte código:
 
-hcl
-
-provider "aws" {
-  region = "us-west-2"
-}
+  hcl
+  
+  provider "aws" {
+    region = "us-west-2"
+  }
 
 # Passo 2: Criar um Resource
 
@@ -20,16 +20,16 @@ Agora, vamos definir um recurso que queremos provisionar. Neste exemplo, vamos c
 
 Adicione o seguinte código ao arquivo **main.tf**:
 
-hcl
-
-resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0" # Este é um ID de AMI público. Você pode usar um ID diferente conforme necessário.
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "ExampleInstance"
+  hcl
+  
+  resource "aws_instance" "example" {
+    ami           = "ami-0c55b159cbfafe1f0" # Este é um ID de AMI público. Você pode usar um ID diferente conforme necessário.
+    instance_type = "t2.micro"
+  
+    tags = {
+      Name = "ExampleInstance"
+    }
   }
-}
 
 # Passo 3: Inicializar o Diretório de Trabalho
 
